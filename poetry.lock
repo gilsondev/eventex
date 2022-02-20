@@ -59,17 +59,6 @@ optional = false
 python-versions = "*"
 
 [[package]]
-name = "dj-static"
-version = "0.0.6"
-description = "Serve production static files with Django."
-category = "main"
-optional = false
-python-versions = "*"
-
-[package.dependencies]
-static3 = "*"
-
-[[package]]
 name = "django"
 version = "4.0.2"
 description = "A high-level Python web framework that encourages rapid development and clean, pragmatic design."
@@ -190,18 +179,6 @@ optional = false
 python-versions = ">=3.5"
 
 [[package]]
-name = "static3"
-version = "0.7.0"
-description = "A really simple WSGI way to serve static (or mixed) content."
-category = "main"
-optional = false
-python-versions = "*"
-
-[package.extras]
-GenshiMagic = ["genshi"]
-KidMagic = ["kid"]
-
-[[package]]
 name = "tomli"
 version = "2.0.1"
 description = "A lil' TOML parser"
@@ -225,10 +202,21 @@ category = "main"
 optional = false
 python-versions = ">=2"
 
+[[package]]
+name = "whitenoise"
+version = "6.0.0"
+description = "Radically simplified static file serving for WSGI applications"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.extras]
+brotli = ["brotli"]
+
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "69e9e16addfda3e94bb00552fd490c3d0ed0138c1c713222ec40385637f4ee84"
+content-hash = "ab7d5b6e549820e6b8efcc6fec01547a6a6233c41ea56cf507653b2b08da26bf"
 
 [metadata.files]
 asgiref = [
@@ -271,9 +259,6 @@ colorama = [
 dj-database-url = [
     {file = "dj-database-url-0.5.0.tar.gz", hash = "sha256:4aeaeb1f573c74835b0686a2b46b85990571159ffc21aa57ecd4d1e1cb334163"},
     {file = "dj_database_url-0.5.0-py2.py3-none-any.whl", hash = "sha256:851785365761ebe4994a921b433062309eb882fedd318e1b0fcecc607ed02da9"},
-]
-dj-static = [
-    {file = "dj-static-0.0.6.tar.gz", hash = "sha256:032ec1c532617922e6e3e956d504a6fb1acce4fc1c7c94612d0fda21828ce8ef"},
 ]
 django = [
     {file = "Django-4.0.2-py3-none-any.whl", hash = "sha256:996495c58bff749232426c88726d8cd38d24c94d7c1d80835aafffa9bc52985a"},
@@ -377,9 +362,6 @@ sqlparse = [
     {file = "sqlparse-0.4.2-py3-none-any.whl", hash = "sha256:48719e356bb8b42991bdbb1e8b83223757b93789c00910a616a071910ca4a64d"},
     {file = "sqlparse-0.4.2.tar.gz", hash = "sha256:0c00730c74263a94e5a9919ade150dfc3b19c574389985446148402998287dae"},
 ]
-static3 = [
-    {file = "static3-0.7.0.tar.gz", hash = "sha256:674641c64bc75507af2eb20bef7e7e3593dca993dec6674be108fa15b42f47c8"},
-]
 tomli = [
     {file = "tomli-2.0.1-py3-none-any.whl", hash = "sha256:939de3e7a6161af0c887ef91b7d41a53e7c5a1ca976325f429cb46ea9bc30ecc"},
     {file = "tomli-2.0.1.tar.gz", hash = "sha256:de526c12914f0c550d15924c62d72abc48d6fe7364aa87328337a31007fe8a4f"},
@@ -391,4 +373,8 @@ typing-extensions = [
 tzdata = [
     {file = "tzdata-2021.5-py2.py3-none-any.whl", hash = "sha256:3eee491e22ebfe1e5cfcc97a4137cd70f092ce59144d81f8924a844de05ba8f5"},
     {file = "tzdata-2021.5.tar.gz", hash = "sha256:68dbe41afd01b867894bbdfd54fa03f468cfa4f0086bfb4adcd8de8f24f3ee21"},
+]
+whitenoise = [
+    {file = "whitenoise-6.0.0-py3-none-any.whl", hash = "sha256:5a4aff543ee860fbe40d743e556adf92ccd41b7df45697cae074afdf657056b9"},
+    {file = "whitenoise-6.0.0.tar.gz", hash = "sha256:08c42bc535f9777eea1a599289d9433f081921f97887eaf6f559446b2a080374"},
 ]
